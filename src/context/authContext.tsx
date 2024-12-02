@@ -1,6 +1,7 @@
 "use client";
 
 import { Auth } from "@/api/generated/thinkEasy.schemas";
+import { useLocalStorage } from "@/components/LocalStorageProvider";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 type AuthContextType = {
@@ -20,21 +21,23 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
+  const { getItem, setItem, removeItem } = useLocalStorage();
+
   const [token, setToken] = useState<string | null>(() => {
     // Load token from localStorage
-    return localStorage.getItem("auth_token") || null;
+    return getItem("auth_token") || null;
   });
 
   const saveToken = (data: Auth) => {
     setToken(data.accessToken);
-    localStorage.setItem("auth_token", data.accessToken);
+    setItem("auth_token", data.accessToken);
     // For future refresh token call implementation
-    localStorage.setItem("refresh_token", data.refreshToken);
+    setItem("refresh_token", data.refreshToken);
   };
 
   const logout = () => {
     setToken(null);
-    localStorage.removeItem("auth_token"); // Remove token on logout
+    removeItem("auth_token"); // Remove token on logout
   };
 
   return (
