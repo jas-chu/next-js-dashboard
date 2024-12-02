@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard App
+
+## Functionality
+
+This Dashboard App provides the following features:
+
+1. User Authentication:
+
+   - Login functionality
+   - Token-based authentication
+
+2. Post Management:
+
+   - View all posts
+   - Create new posts
+
+3. Search Functionality:
+   - Search for posts based on title and content
+
+## Tech Stack
+
+- **Frontend**: Next.js 15 with React 18
+- **Language**: TypeScript
+- **State Management**: Jotai (since Recoil is getting deprecated)
+
+## Libraries Used
+
+1. **Chakra UI**: Modular and accessible component library for React
+2. **Orval**: Tool for generating TypeScript API clients from OpenAPI specifications
+3. **React Query**: Data-fetching and state management library for React
+4. **React Hook Form**: Performant, flexible and extensible forms with easy-to-use validation
+5. **Axios**: Promise-based HTTP client for making API requests
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Available Scripts
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev`: Starts the development server
+- `npm run build`: Builds the app for production
+- `npm start`: Runs the built app in production mode
+- `npm test`: Runs the test suite
