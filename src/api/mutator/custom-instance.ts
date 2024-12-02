@@ -25,9 +25,8 @@ export const customInstance = <T>(config: AxiosRequestConfig): Promise<T> => {
     ({ data }) => data
   );
 
-  // Attach the cancel function to the promise (allowing manual cancellation of the request)
-  // @ts-ignore
-  promise.cancel = () => {
+  // @ts-expect-error: allowing manual cancellation of the request
+promise.cancel = () => {
     source.cancel('Query was cancelled');
   };
 
