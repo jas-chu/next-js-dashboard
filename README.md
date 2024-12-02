@@ -44,3 +44,6 @@ This Dashboard App provides the following features:
 - `npm run build`: Builds the app for production
 - `npm start`: Runs the built app in production mode
 - `npm test`: Runs the test suite
+
+## Available on Vercel
+https://next-js-dashboard-gryoe7avf-jas-chus-projects.vercel.app/
