@@ -1,3 +1,5 @@
+"use client";
+
 import { Auth } from "@/api/generated/thinkEasy.schemas";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
